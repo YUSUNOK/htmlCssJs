@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+        div>img{
+            width: 200px;
+            height: 200px;
+        }
+        .c1{
+            border: 3px solid chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/pg1.gif">
+    </div>
+    <button id="btn1">div내부 앞에 추가</button>
+    <button id="btn2">div내부 뒤에 추가</button>
+    
+    <button id="btn3">div외부 앞에 추가</button>
+    <button id="btn4">div외부 뒤에 추가</button>
+    <button id="btn5">img 1개 삭제</button>
+    <button id="btn6">div 안 비우기</button>
+    <button id="btn7">class 추가</button>
+    <button id="btn8">class 삭제</button>
+    <button id="btn9">부모요소 접근</button>
+
+    <script>
+        $('#btn1').click(function(){
+            // prepend : 해당 요소 내부 앞쪽에 추가
+            $('div').prepend('<img src="img/pg2.gif">');
+        });
+
+        $('#btn2').click(function(){
+            // append : 해당 요소 내부 뒤쪽에 추가
+            $('div').append('<img src="img/pg3.gif">');
+        });
+
+        $('#btn3').click(function(){
+            // before : 해당 요소 외부 앞쪽에 추가
+            //$('div').before('<button id="newBtn">div 외부 뒤쪽에 추가하기</button>');
+            $('div').before('<img src="img/pg2.gif">');
+        });
+
+        // .click vs on('click')
+        // 동적 이벤트 바인딩 차이
+        // .click : 최초에 페이지를 로딩할 때 선언되어있었던 element에 이벤트 바인딩
+        // 그리고나서 더 이상 동적으로 바인딩 하지 않음.
+        // on() : 동적으로 추가된 태그에 이벤트 추가 
+
+        // 동적으로 추가된 버튼에 기능이 적용되지 않음
+        // $('#newBtn').click(function(){
+        //     alert('성공!');
+        // });
+
+        // 동적으로 추가된 버튼에 기능 적용됨
+        // 처음 다른 문서 => 처음부터 다시 문서에 접근해야함 $(document)
+        // on('이벤트종류','접근객체','함수')
+        // $(document).on('click', '#newBtn', function(){
+        //     alert('성공!');
+        // });
+
+        $('#btn4').click(function(){
+            // after : 해당 요소 외부 뒤쪽에 추가
+            $('div').after('<img id="img1" src="img/pg3.gif">');
+        });
+
+        $('#btn5').click(function(){
+            // 삭제 
+            $('#img1').remove();
+        });
+
+        $('#btn6').click(function(){
+            // empty() : 해당 요소 내부 요소 모두 삭제하기
+            $('div').empty();
+        });
+
+        $('#btn7').click(function(){
+            // addClass : 해당 요소에 클래스 추가
+            $('img').addClass('c1');
+        });
+
+        $('#btn8').click(function(){
+            // removeClass : 해당 요소에 클래스 삭제
+            $('img').removeClass('c1');
+        });
+
+        $('#btn9').click(function(){
+            // .parent() : 부모요소에 접근할 때 사용 / 2번쓰면 2번 접근합니다.
+            $('div>img').parent().parent().css('background-color', 'pink');
+        });
+
+    </script>
+</body>
+</html>

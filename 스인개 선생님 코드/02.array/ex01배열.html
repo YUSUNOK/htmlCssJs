@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 배열 = 여러 변수를 하나의 묶음으로 다루는 것
+
+        // Java와 비교?
+
+        // 1. 스크립트는 데이터 형식을 따로 표기하지 않는다.
+        // java : int[] array = new int[5];
+        // javascript : let array = []; (비어있는 배열을 만들겠다.)
+
+        // 2. 데이터 크기 또한 따로 지정하지 않습니다.
+        // 차이점 : 데이터의 크기를 가변적으로 늘렸다 줄였다 할 수 있다. 훨씬 간편
+        // 마치 자바의 arrayList처럼 사용이 가능
+        // 자바스크립트는 dynamically typed language (타입을 동적으로 정의하는 언어)
+
+        // 왜일까?
+        // java 오래된 언어 -> 컴퓨터 성능이 X -> 공간이 한정적
+        // JS 최신언어 -> 컴퓨터 성능이 뛰어남 -> 데이터 크기 따로 지정X
+
+        // 1. 배열의 선언 (방법 두 가지)
+        let numList = [];
+        let numList2 = new Array(5);
+
+        // java와의 차이점
+        // java -> 5개로 선언 -> 무조건 5개!
+        // js -> 5개로 선언했어도 초과할 수 있다. -> 공간이 동적, 가변적
+
+        // 2. 배열의 생성
+        numlist = new Array(1,2,3);
+        numlist2 = [1,2,3];
+
+        let numList3 = [1,2,3,4,5];
+
+        // 3. 인덱스를 활용해서 데이터를 저장하기
+        // 반드시 배열을 선언한 후에 접근해야한다.
+        // 인덱스로 접근할 때 포인트는 0부터 시작한다는 것
+
+        numList[0] = 1;
+        numList[1] = "가나다";
+        numList[2] = true;
+
+        console.log("배열출력 " + numList);
+
+        // 배열의 길이 구하기 -> 왜 길이라는 개념을 구해야할까?
+        // 반복문을 돌릴 때 for문이랑 같이 쓰려고
+
+        console.log("배열의 길이 >>> " + numList.length)
+
+        // 4. 배열의 저장된 데이터에 접근
+
+        for (let i = 0; i < numList.length; i++){
+            console.log(numList[i]);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

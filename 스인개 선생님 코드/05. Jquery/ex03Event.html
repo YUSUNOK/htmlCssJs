@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>마우스를 올리셨군요!</h1>
+    <script>
+        // jQuery 스타일 다중 등록하는 방법
+        // $('h1').css('background-color', 'black');
+        // $('h1').css('color','whitesmoke');
+
+        $('h1').css({
+            'background-color':'black',
+            'color':'whitesmoke'
+        });
+
+        // $(function(){ // 1. 문서가 준비가 됐다면
+        //     $('h1').mouseover(function(){ // 2. h1 태그에 마우스를 올렸을 때,
+        //         $('h1').css({ // 3. h1 태그의 배경색과 글자색을 변경하시오.
+        //             'background-color':'whitesmoke',
+        //             'color':'black'
+        //         })
+        //     })
+
+        //     $('h1').click(function(){ 
+        //         $('h1').css({
+        //             'background-color':'lightpink',
+        //             'color':'brown'
+        //         })
+        //     })
+        // })
+
+        // 다중 이벤트 처리 on 메소드()
+        $(function(){
+            $('h1').on({
+                // click : 한번 클릭
+                // dblclick : 더블 클릭
+                dblclick : function(){
+                    $('h1').css({
+                    'background-color':'lightpink',
+                    'color':'brown'
+                    })
+                },
+                // mouseover : 마우스를 올렸을 때, 내부의 태그안에 들어가도 이벤트가 한번 더 발생
+                // mouseenter : 마우스를 올렸을 때, 해당 객체의 안에 들어가있는지 외부에 있는지만 따짐
+                mouseenter : function(){
+                    $('h1').css({
+                    'background-color':'whitesmoke',
+                    'color':'black'
+                    })
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

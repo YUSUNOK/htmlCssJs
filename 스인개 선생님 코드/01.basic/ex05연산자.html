@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // java 와의 차이점?
+        // 1. 나누기 연산자 : js에는 /는 실제 나누기 연산결과를 나타냄
+        let num = 312;
+        let res = num/100;
+        console.log(res);
+
+        // 2. == vs ===
+        // == 값만 일치
+        // === 값, 자료형 일치
+
+        console.log('5' == 5); // true
+        console.log('5'=== 5); // false
+
+        let num2 = 456;
+
+        // Case 1 : 형변환을 통한 작업
+        let res2 = parseInt(num2/100)*100; // 300
+        console.log("1. 백의 자리 이하 버린 결과 >>" , res2 );
+
+        // Case 2 : 나누기 연산자를 통한 작업
+        let res3 = num2 - num2%100 // 312 - 12 = 300
+        console.log("2. 백의 자리 이하 버린 결과 >>", res3);
+        // 값이 문자열로 나올겁니다.
+        console.log("2. 백의 자리 이하 버린 결과 >>"+res3);
+
+
+    </script>
+</body>
+</html>

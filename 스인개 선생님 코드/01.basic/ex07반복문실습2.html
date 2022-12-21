@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 랜덤한 수를 뽑아준다.
+        let ranNum = parseInt(Math.random()*100);
+        //console.log(ranNum);
+        // 2. 사용자에게 숫자를 입력받는다.
+        while(true){
+            let num = Number(prompt('숫자를 입력하시오'));
+            // 3. 숫자 > 랜덤 => '입력한 숫자보다 작은 수입니다.' alert
+            if(num > ranNum){
+                alert('입력한 숫자보다 작은 수입니다.');
+            }
+            // 4. 숫자 < 랜덤 => '입력한 숫자보다 큰 수 입니다.' 
+            else if (num < ranNum){
+                alert('입력한 숫자보다 큰 수 입니다.');
+            }
+            // 5. 숫자 = 랜덤 => '정답입니다! 축하합니다!'
+            else {
+                alert('정답입니다. 축하합니다.');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

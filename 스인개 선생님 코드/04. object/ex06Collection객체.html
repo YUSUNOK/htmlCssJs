@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <script>
+        // id는 고유한 값이여서 element 하나만 가지고오지만
+        // tagName은 여러개 존재 가능하기때문에 elements 복수개가 넘어옴.
+        // HTMLCollection 객체로 받아옴 >> 배열과 모양이 비슷하지만 실제로 유사배열이라고 부름
+        // 사용법은 똑같음.
+        //let lis = document.getElementsByTagName("li");
+        let lis = document.querySelectorAll('li');
+        //alert(lis);
+        console.log(lis[0].innerText);
+        for(let i=0; i< lis.length; i++){
+            console.log(lis[i].innerText);
+        }
+    </script>
+</body>
+</html>

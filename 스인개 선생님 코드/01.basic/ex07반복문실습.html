@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 시작숫자, 마지막 숫자 2개 받아주기
+        let num1 = Number(prompt('시작할 숫자를 입력하시오'));
+        let num2 = Number(prompt('마지막 숫자를 입력하시오'));
+        
+        let sum = 0;
+        
+        // 2. 반복문을 사용해서 시작숫자부터 마지막숫자까지의 합을 출력하기
+
+        for(let i = num1; i<= num2; i++){
+            sum+=i;
+        }
+
+        // "시작숫자 부터 마지막 숫자까지의 합 >> XXX "
+
+        console.log(num1+"부터"+num2+"까지의 합 >> "+ sum);
+    </script>
+</body>
+</html>

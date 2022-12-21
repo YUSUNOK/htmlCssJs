@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id='like'>좋아요</button><span>0</span>
+    <br>
+    <input type="text"><button class='writeCom'>댓글작성</button>
+    <br>
+    <div id="com">
+      <!-- 댓글이 들어가는 공간 -->
+    </div>
+    <script>
+        // 요소를 동적으로 추가/삭제
+        // $(document).on('click', '#idName',function(){
+        //})
+
+        //============= 1+2 .on 으로 진행===========
+        // 1. id가 like인 '좋아요' 버튼을 눌렀을 때 숫자 증가 + 텍스트를 변경
+        // id 속성을 삭제하고 다시 부여 -> 'dislike' 라는 아이디로
+        // 2. id가 dislike 인 '좋아요 취소' 버튼을 눌렀을 때 다시 0으로 + 텍스트를 변경
+        // id 속성을 삭제하고 다시 부여 -> 'like' 라는 아이디로 
+
+        // ============= 3. click으로 진행 ============
+        // 3. class가 writeCom인 버튼을 클릭했을 때, #com에 내용 추가!
+        // html을 추가 class이름이 'removeCom'인 버튼을 추가
+        // input 타입 값 비워주기
+
+        // 4. class이름이 removeCom인 버튼을 클릭 시, #com 태그를 삭제
+    </script>
+</body>
+</html>

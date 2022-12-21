@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt"> <button onclick="data()">클릭</button>
+
+    <script>
+        function data(){
+            // innerHTML/innerText 데이터를 가져올 수 없다.
+            // input태그에 글자를 작성해도 개발자도구 페이지를 살펴보면 실제 코드에
+            // 작성되는 내용이 없음
+            // innerHTML/innerText 태그속에 있는 내용들을 가지고 오는 기능이기에 사용할 수가 없다.
+            let txt = document.getElementById("txt").value;
+            alert(txt);
+        }
+
+    </script>
+</body>
+</html>

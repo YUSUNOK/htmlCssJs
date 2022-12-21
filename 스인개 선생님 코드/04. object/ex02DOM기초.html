@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 스크립트 인라인방식 기능 적용 -->
+    <p id="text"><span>Hello, World!</span></p>
+    <button onclick="innerFunc()">Click!</button>
+
+    <script>
+        function innerFunc(){
+            let str = document.getElementById('text');
+
+            // 태그 + 컨텐츠 = 요소
+            // alert(str);
+            // element 라는 객체가 넘어옵니다.
+            // document.getElement
+
+            // 요소 안에 '내용만' 가지고 올 때 : .innerText / .innerHTML
+            // innerText : 해당 요소안에 text만 가져옴
+            // innerHTML : 해당 요소안에 태그 + 컨텐츠 가져옴
+            console.log(str.innerText);
+            console.log(str.innerHTML);
+
+            // 요소 안의 내용을 수정하고 싶을 때
+            // str.innerText = '<h1>텍스트 수정!</h1>';
+            // document.getElementById('text').innerText = '<h1>텍스트 수정!</h1>';
+            //         str                   // 텍스트 조회 = '<h1>텍스트 수정!</h1>';
+
+            // 태그까지 적용하고 싶을 때
+            str.innerHTML = '<h1>텍스트 수정!</h1>';
+        }
+
+    </script>
+
+</body>
+</html>

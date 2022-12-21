@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 입력값의 타입을 확인하지 않음
+        var num1 = 1;
+        var num2 = "ab";
+
+        function addNum1(num1, num2){
+            alert(num1-num2);
+        }
+
+        addNum1(num1, num2)
+
+        // 2. 매개변수와 입력값의 개수가 같은지 확인하지 않음
+        var num1 = 2;
+        var num2 = 4;
+
+        addNum(num1, num2);
+        addNum(num1, num2, 3, 4);
+
+        // arguments객체
+        function addNum(n1,n2){
+            alert(n1*n2);
+            for(var i=0; i<arguments.length; i++){
+                console.log(arguments[i]);
+            }
+        }
+
+        // 3. 입력값의 개수가 매개변수 개수보다 적다면 
+        // 매개변수 값을 undefined로 설정
+
+        var num1 = 1;
+        var num2 = 2;
+
+        function addNum2(n1,n2){
+            console.log(n1);
+            console.log(n2);
+            console.log(n1+n2);
+        }
+
+        addNum2();
+        // addNum2(num1);
+
+    </script>
+</body>
+</html>

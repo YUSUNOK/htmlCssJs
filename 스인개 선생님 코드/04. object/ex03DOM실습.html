@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="span1">0</span>
+    <br>
+    <button onclick="plus()">+1 증가</button>
+    <button onclick="minus()">+1 감소</button>
+    <script>
+        // 1. span 태그 컨텐츠가 0인 친구 id="span1"
+        // 2. button 2개 만들기 / 1개는 onclick="plus()" / 1개는 onclick="minus()"
+        // 3. 수정해야하는 span태그 글자 가지고오기
+        // 4. 가지고온 데이터타입이 String이므로 숫자로 형변환
+        // 5. 각각 함수 선언할 때, innerHTML 더하기, 빼기 
+        // minus함수는 0일경우는 감소하지않도록 조건주기!
+        let span = document.getElementById('span1'); // 해당 요소의 자리 
+        
+        console.log(span1);
+
+        function plus(){
+            let span1 = Number(span.innerText); // 해당 요소의 컨텐츠 text
+            span.innerText = span1+1; // 해당 요소의 컨텐츠(text)에 값 넣기
+        }
+        function minus(){
+            let span1 = Number(span.innerText); // 해당 요소의 컨텐츠 text
+            if(span1 > 0){
+                span.innerText = span1-1;
+            }
+        }
+    </script>
+</body>
+</html>

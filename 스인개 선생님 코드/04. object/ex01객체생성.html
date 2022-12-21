@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 (object) : 여러개의 데이터를 담을 수 있다.
+
+        // 배열은 인덱스 접근
+        let smhrd = ['강병국','오지윤','장승원'];
+        //console.log(smhrd[0]);
+
+        // 객체 key - value 로 접근
+        // object 객체 생성
+        let person = {};
+
+        // 속성(property) 추가
+        // 객체명.프로퍼티
+        person.name = '강병국';
+        person.age = '24';
+
+        console.log(person.name);
+        console.log(person.age);
+
+        // 배열보다는 조금 더 직관적으로 데이터를 꺼내올 수 있다.
+
+        let pokemon1 = {
+            name: "피카츄",
+            age: 2,
+            skill : function(){
+                alert("백만볼트!");
+            }
+        }
+
+        let pokemon2 = {
+            name: "꼬북이",
+            age: 1,
+            skill : function(){
+                alert("물대포!");
+            }
+        }
+
+        document.write("첫번째 캐릭터 이름 : " + pokemon1.name);
+        document.write("<br>");
+        document.write("첫번째 캐릭터 나이 : " + pokemon1.age);
+        document.write("<br>");
+
+        document.write("두번째 캐릭터 이름 : " + pokemon2.name);
+        document.write("<br>");
+        document.write("두번째 캐릭터 나이 : " + pokemon2.age);
+        document.write("<br>");
+
+        pokemon1.skill();
+        pokemon2.skill();
+
+
+
+
+    </script>
+</body>
+</html>

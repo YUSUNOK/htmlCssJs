@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 사용 목적
+        // 1. 어떠한 실행코드를 묶어서 실행하기 위함
+        // 2. 중복되는 코드 최소화
+
+        // alert() 내장함수
+
+            // 1. 함수선언 & 함수호출
+
+            // 먼저 helloworld 함수를 정의
+            function helloworld(
+                // 어떤 값을 전달받을건지 전달받는 인자를 정의하는 부분 : 매개변수
+            ) {
+                // 실제로 함수 안에서 어떤 코드가 동작할지, 코드를 작성하는 부분 : 로직
+                console.log("hello world");
+            }
+
+            // 함수를 호출
+            helloworld();
+
+            // 매개변수를 통한 기능 출력함수 작성
+            function addNum(num1, num2){
+                console.log("addNum의 결과는 " +(num1+num2));
+            }
+
+            addNum(5,10);
+
+            //매개변수를 통해 리턴 함수 작성
+            //함수가 결과값을 반환하는 경우에는 함수 내에 반드시 return문을 사용
+            function minusNum(num1, num2){
+                return num1-num2;
+            }
+
+            let res = minusNum(5,10);
+            console.log("minusNum의 결과는 " +  res);
+
+            // 함수 특징 세가지
+            // 1. 데이터 타입이 동일한지 검사하지 않는다.
+            // 2. 매개변수 & 입력값 개수가 같은지 확인하지 않는다.
+            // 3. 만약 입력 값의 개수가 매개변수보다 적다면 undefined로 설정된다.
+
+
+    </script>
+</body>
+</html>
