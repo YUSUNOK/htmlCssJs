@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 타이머 진행 중 click버튼 클릭시 click 문구가 뜨도록 하시오. -->
+    <button id="btn">Click!😊</button>
+    <div id="container">
+
+
+    </div>
+    <script>
+        //  document.querySelector('#container').innerHTML을 변수에 넣어버리면 작동이 안된다.
+        // document.querySelector('#container').innerHTML 이것은 객체를 가리키는 것이 아니라 컨텐츠를 string형태로 가져오기만 하는 것이기 때문에 
+        
+       let innerContent= document.querySelector('#container');
+      
+
+       for(let i =1; i <=3; i ++){
+        setTimeout(function(){
+        innerContent.innerHTML += "<p>"+i+"초</p>";
+       }, Number(i) * 1000);
+       }
+      
+
+    //    setTimeout(function(){
+    //     innerContent.innerHTML += "<p>2초</p>";
+    //    }, 2000);
+
+    //    setTimeout(function(){
+    //     innerContent.innerHTML += "<p>3초</p>";
+    //    }, 3000);
+
+       document.querySelector('#btn').addEventListener('click', function(){
+        innerContent.innerHTML += "click😃<br>";
+
+       })
+
+          
+     
+    </script>
+</body>
+</html>

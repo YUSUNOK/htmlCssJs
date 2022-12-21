@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        /* 
+            java, web, 안드로이드 세 과목의 점수를 입력받아준다. prompt
+            총점, 평균점수(소수점 없이), 등급(90 80 70 60 F)을 매겨준다.
+            console.log 창 당신의 평균은 xx점이고, 당신의 등급은 x입니다.
+        */
+       let java = Number(prompt('java 점수 입력'));
+       let web = Number(prompt('web 점수 입력'));
+       let android = Number(prompt('안드로이드 점수 입력'));
+
+       let total = java + web + android;
+       let mean = parseInt(total / 3);
+       let grade = '0';
+       if(mean >= 90){
+        grade = 'A';
+       }
+       else if(mean >= 80){
+        grade = 'B';
+       }
+       else if(mean >= 70){
+        grade = 'C';
+       }
+       else if(mean >= 60){
+        grade = 'D';
+       }
+       else {
+        grade = 'F';
+       }
+
+       console.log('당신의 평균은',mean,'점이고, 당신의 등급은 ',grade,'입니다.');
+    </script>
+</body>
+</html>

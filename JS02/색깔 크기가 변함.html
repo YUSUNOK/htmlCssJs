@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 버튼 클릭 시, html 요소의 스타일을 바꾸는 페이지를 만드시오. -->
+    <h1 id="this">아래 버튼을 클릭하면 이텍스트의 색깔과 크기가 변한다.</h1>
+    <button onclick="change()">이 버튼을 클릭!</button>
+
+    <script>
+        function change(){
+           let thisStyle = document.getElementById('this').style;
+           thisStyle.color = 'red';
+           thisStyle.fontWeight = 'bold';
+           thisStyle.fontSize = '50px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="span1">0</span><br>
+    <button onclick="plus()">1개 플러스</button>
+    <button onclick="minus()">1개 마이너스</button>
+    <script>
+        function plus(){
+            let spanDom = document.getElementById('span1');
+            spanDom.innerText=Number(spanDom.innerText) + 1;
+        }
+
+        function minus(){
+            let spanDom = document.getElementById('span1');
+            if(spanDom.innerText != 0){
+                spanDom.innerText = Number(spanDom.innerText) - 1;
+            }
+        }
+
+
+    </script>
+  </body>
+</html>

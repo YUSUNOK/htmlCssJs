@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container{
+        background : beige;
+        height : 100vh;
+        display : flex;
+        flex-direction: row;
+        /* flex-direction : row-reverse; // 1234 이런 순서가 바뀜
+        flex-direction: column;
+        flex-direction: column-reverse; */
+        /* wrap은 한줄 다차면 넘어감 */
+        flex-wrap: nowrap; 
+        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
+        flex-flow: row nowrap;
+        justify-content : flex; 
+        /* justify-content :  1234이런 순서는 유지함, 중심축에서 아이템을 어떻게 배치하느냐를 결정
+        flex-start -> 주축에 시작점에 붙어서 
+        flex-end -> 주축에 끝점에 붙어서  
+        center -> 아이템들을 센터로 놓음
+        space-around  : 아이템들을 띄어놓음 맨 왼 오른쪽은 간격이 좁고 아이템들 사이는 간격이 있음
+        왜냐면 각자의 아이템의 좌우에 간격이 있으니까 이게 합해져서
+        space-evenly  : 맨 좌우 아이템들 사이의 간격을 완전 똑같게 
+        space-between : 맨 좌우 간격에는 아이템을 딱 맞게 배치하고 중간에만 간격을 줌
+        */
+        /* align-items : 반대축에 아이템을 배치하는 방법
+        center  : 반대축에 중심으로 
+        baseline : 텍스트를 맞춰준다.*/
+
+        /* align-content : 
+        space-between 반대축 기준으로 맨 끝 아이템은 끝에 딱 붙어있고 맨끝이 아닌 아이템들 사이에 간격을 준다.
+        justify-content 속성을 다 쓸 수 있다.
+        
+        
+        */
+      }
+
+      .item{
+        width : 40px;
+        height : 40px;
+        border : 2px solid black; 
+      }
+        /* 아이템에 들어갈 수 있는 속성
+        order : 2, 1, 3, ... 등 개별 아이템을 몇번째로 놓을지 설정
+        flex-grow : 0 ,1 
+        0 : 배경을 꽉 채우려고 하지 않는다.
+        1 : 배경을 꽉 채우려고 한다. 
+        2
+        3
+        ...  다른 아이템에 비해 몇배로 키울 건지도 넣을 수 있다.
+        flex-shrink : 1 .2.3 창을 줄일 떄 다른 아이템에 비해 몇배로 줄일 건지 넣을 수 있다.
+        
+        flex-basis : %를 지정하면 flex-grow, flex-shrink를 지정하지 않아도 개별 아이템을 몇퍼센트씩할지 정해진다.
+        align-self : center -> 얘만 반대축으로 가운데 하고 싶어! 할 때
+        */
+      .item1{
+        background  :red ;
+      }
+      .item2{
+        background  :orange ;
+      }
+      .item3{
+        background  : yellow ;
+      }
+      .item4{
+        background  :green ;
+      }
+      .item5{
+        background  : blue ;
+      }
+      .item6{
+        background  :purple ;
+      }
+      .item7{
+        background  :black ;
+      }
+      .item8{
+        background  :aqua ;
+      }
+      .item9{ 
+        background  :blueviolet ;
+      }
+      .item10{
+        background  :cadetblue ;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.container>div.item.item${$}*10 -->
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+    </div>
+  </body>
+</html>

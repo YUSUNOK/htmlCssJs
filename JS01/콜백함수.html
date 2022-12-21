@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">hello</button>
+    <div id="container">
+
+
+    </div>
+    <script>
+        /*
+        콜백함수 
+        어떤 이벤트가 발생했거나, 특성 시점에 도달했을 때 시스템에서 호출하는 함수
+
+        또는 함수 안에 또다른 함수를 사용할 떄
+        용도 : 내가 원하는 시점에 사용하고 싶을 때 콜백함수를 사용한다.
+
+        1) 이벤트 핸들러 & 리스너
+        어떤 이벤트가 발생했을 때 : addEventListener('이벤트 종류', 함수)
+        */ 
+       document.querySelector('#btn').addEventListener('click', function(){
+        console.log('bye');
+       })
+
+       /*
+       2) 타임 핸들러
+       의도적으로 시간 지연을 사용하는 기능 : setTimeout(함수, 시간(1000 =1초))
+       */
+      
+       document.getElementById('container').innerHTML = '<p>'+1+'</p>';
+       setTimeout(function(){
+        console.log('3');
+       }, 5000);
+       console.log('2');
+    </script>
+</body>
+</html>

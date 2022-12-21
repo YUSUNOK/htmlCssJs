@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      id="imgg"
+      width="100px"
+      height="100px"
+      src="img/puppy.jpg"
+      alt="강아지"
+    />
+    <button onclick="change()">이미지 변환</button>
+    <script>
+      function change() {
+        let nowAlt = document.getElementById("imgg").getAttribute('alt');
+        if (nowAlt == "강아지") {
+          document.getElementById("imgg").setAttribute("src", "img/고양이.png");
+          document.getElementById("imgg").setAttribute("alt", "고양이");
+        } else {
+          document.getElementById("imgg").setAttribute("src", "img/puppy.jpg");
+          document.getElementById("imgg").setAttribute("alt", "강아지");
+        }
+      }
+    </script>
+  </body>
+</html>

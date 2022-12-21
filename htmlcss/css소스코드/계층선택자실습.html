@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 계층선택자를 이용해서 해당 결과에 스타일을 입혀라! */
+
+      /* 
+            1. Q. div요소를 기준으로 자손선택자를 활용하여 span요소의 글자색을 변경하시오.
+               div span{
+                 color:red;
+                  }
+            2. Q. div요소를 기준으로 자손선택자를 활용하여 li요소의 글자색을 변경하시오.
+                   div li{
+                color : blue;
+                }   
+            3. Q. ol요소를 기준으로 자식선택자를 활용하여 span요소의 글자색을 변경하시오.
+                 ol > span{
+                     color : red;
+                 }
+            4. Q. 첫번째 li요소를 기준으로 근접후행선택자를 활용하여 다음 li요소의 글자색을 변경하시오.
+             li + li{
+            color : blue;
+        }
+            5. Q. 첫번째 li요소를 기준으로 후행선택자를 활용하여 다음 li요소의 글자색을 변경하시오.
+             li ~ li{
+        color : red;
+       }
+        5. Q. 두번쨰 li요소를 기준으로 후행선택자를 활용하여 다음 li요소의 글자색을 변경하시오.
+         li:nth-child(2) ~li{
+        color:red;
+      }
+         */
+     
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <strong>연수생 수칙</strong>
+      <ol>
+        <li>지각하지 않기</li>
+        <li>결석하지 않기</li>
+        <span>(불가피할 땐 꼭 담당연구원에게 미리 말하기)</span>
+        <li>복습하기</li>
+      </ol>
+    </div>
+  </body>
+</html>

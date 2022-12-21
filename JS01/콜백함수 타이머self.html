@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click😃</button>
+    <div id="container"></div>
+
+    <script>
+        let conTainerObject = document.querySelector('#container');
+
+        for(let i =1; i <= 3; i ++){
+            setTimeout(function(){
+                conTainerObject.innerHTML += "</p>"+i+"</p>";
+            }, i*1000);
+        }
+
+        document.querySelector('#btn').addEventListener('click', function(){
+            conTainerObject.innerHTML += "</p>Click💕</p>";
+        })
+    </script>
+</body>
+</html>

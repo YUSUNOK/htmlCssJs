@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- js 배열  : 
+        1) 다양한 데이터 자료형 저장 가능
+        2) 배열의 크기가 가변적
+    -->
+
+    <script>
+        let arr = [1, "최", 3.4, "김"];
+        let arr2 = new Array("강", "최", "이", "김");  
+        let numlist2 = new Array(1,2); // 배열 [1,2]
+        let numlist3 = new Array(2); // 배열의 크기가 2임
+        console.log(numlist2 + "입니다.");
+
+        /* 인덱스를 활용해서 데이터를 저장하기 
+            반드시 배열을 선언한 후에 접근해야 한다.
+            인덱스로 접근할 때 포은트는 0부터 시작한다는 것
+        
+        */ 
+        numlist2[2] = '메롱';
+       console.log(numlist2 + "입니다.");
+
+
+       for(let i =0; i < numlist2.length ; i++){
+        console.log(numlist2[i]);
+       }
+    </script>
+
+</body>
+</html>

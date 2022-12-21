@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  head 태그 안에는 단순한 로직들, 선언들, 초기화 할 때 사용 -->
+    <script src="외부.js"></script>
+</head>
+<!-- 작성 위치에 따라 실행 순서와 브러우저 렌더링에 영향을 미친다. -->
+<body>
+      
+    <!-- 복잡한 로직 처리(제어) -->
+    <button onmouseenter="alert('마우스 올림')">마우스 올림</button>
+    <button onmousewheel="alert('스크롤')">스크롤</button>
+    <input type="button" onclick="ck()" value="버튼클릭!">
+</body>
+</html>

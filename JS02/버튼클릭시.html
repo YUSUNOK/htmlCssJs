@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="goh1()">h1태그 생성</button>
+    <button onclick="goa()">a태그 생성</button>
+    <button onclick="goul()">ul태그 생성</button>
+
+    <br><br>
+
+    <div id="container">
+        
+    </div>
+    <script>
+        function goh1(){
+            let nowContent =document.getElementById('container').innerHTML;
+            document.getElementById('container').innerHTML = nowContent + "<h1>DOM 활용하기</h1>";
+        }
+
+        function goa(){
+            let nowContent =document.getElementById('container').innerHTML;
+            document.getElementById('container').innerHTML = nowContent + "<a href='https://www.google.com'>Google로 이동</a>";
+        }
+
+        function goul(){
+            let nowContent =document.getElementById('container').innerHTML;
+            document.getElementById('container').innerHTML = nowContent +
+            "<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>";
+        }
+    </script>
+</body>
+</html>
